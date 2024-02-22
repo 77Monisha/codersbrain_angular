@@ -1,0 +1,30 @@
+<!-- Dummy Cards  -->
+<div class="card-list">
+  <div *ngFor="let person of dummyCards" class="card">
+    <img
+      *ngIf="person.avatar"
+      src="{{ person.avatar }}"
+      alt="{{ person.name }} avatar"
+      class="card-img-top"
+      style="width: 20rem; height: 20rem; object-fit: cover"
+    />
+    <div class="card-body">
+      <p class="card-header">
+        Name: <b>{{ person.name }}</b>
+      </p>
+      <p class="card-text">
+        Email: <b>{{ person.email }}</b>
+      </p>
+      <p class="card-text">
+        Age: <b>{{ person.dob }}</b>
+      </p>
+      <p class="card-text">
+        Country: <b>{{ person.country }}</b>
+      </p>
+      <button type="button" class="dark" style="margin-right: 10px">
+        Update
+      </button>
+      <button type="button" class="danger">Delete</button>
+    </div>
+  </div>
+</div>

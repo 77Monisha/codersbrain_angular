@@ -1,0 +1,86 @@
+<div class="form-app">
+  <h1 class="head-title">Person Management App</h1>
+
+  <div class="form">
+    <h2 style="font-size: 35px">Add New Member</h2>
+    <form class="form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="field">
+        <label class="name" for="name">Name</label>
+        <input
+          type="text"
+          class="name"
+          formControlName="name"
+          required
+          placeholder="Write your Name"
+        />
+      </div>
+      <div class="field">
+        <label class="email" for="email">Email</label>
+        <input
+          type="email"
+          class="email"
+          formControlName="email"
+          required
+          placeholder="Enter Email"
+        />
+      </div>
+      <div class="field">
+        <label for="dob">Date of Birth</label>
+        <input
+          type="date"
+          id="dob"
+          formControlName="dob"
+          required
+          placeholder="Date of Birth"
+        />
+      </div>
+      <div class="field">
+        <label for="country">Country</label>
+        <input
+          type="text"
+          id="country"
+          formControlName="country"
+          required
+          placeholder="Country"
+        />
+      </div>
+      <div class="field">
+        <label for="avatar">Avatar</label>
+        <input
+          type="url"
+          id="avatar"
+          formControlName="avatar"
+          required
+          placeholder="Enter URL"
+        />
+      </div>
+      <div>
+        <button type="submit" [disabled]="!registerForm.valid">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- That White horizontal line for separation  -->
+  <hr class="horizontal-line" />
+
+  <div class="persons">
+    <h2 class="title">List Of Persons</h2>
+
+    <!-- Dummy content  -->
+    <div>
+      <app-dummy-list></app-dummy-list>
+
+      <!-- Card Component : A scalable component in which the details and methods are passed as props -->
+      <div class="person">
+        <app-card-view
+          *ngFor="let person of submittedData; let i = index"
+          [person]="person"
+          (onDelete)="handleDelete(person, i)"
+          (onClick)="handleUpdate(person, i)"
+          [index]="i"
+          style="display: flex; flex-direction: column; gap: 30px"
+        ></app-card-view>
+      </div>
+    </div>
+  </div>
+</div>

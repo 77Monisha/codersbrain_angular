@@ -1,0 +1,35 @@
+<!-- Card Component : A scalable component in which the details and methods are passed as props -->
+<div class="card card-view rounded border" style="width: 20rem">
+  <img
+    *ngIf="person.avatar"
+    [src]="person.avatar"
+    alt="{{ person.name }} avatar"
+    class="card-img-top"
+    style="width: 20rem; height: 20rem; object-fit: cover"
+  />
+  <div class="card-body">
+    <h5 class="card-header">
+      Name: <b>{{ person.name }}</b>
+    </h5>
+    <p class="card-text">
+      Email: <b>{{ person.email }}</b>
+    </p>
+    <p class="card-text">
+      Age: <b>{{ calculateAge(person.dob) }}</b>
+    </p>
+    <p class="card-text">
+      Country: <b> {{ person.country }}</b>
+    </p>
+    <button
+      type="button"
+      class="dark"
+      style="margin-right: 10px"
+      (click)="handleUpdate(person)"
+    >
+      Update
+    </button>
+    <button type="button" class="danger" (click)="handleDelete(person)">
+      Delete
+    </button>
+  </div>
+</div>

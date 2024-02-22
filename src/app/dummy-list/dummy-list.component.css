@@ -1,0 +1,49 @@
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.card {
+  background-color: white;
+  color: rgb(71, 70, 70);
+  text-align: center;
+  border-radius: 25px;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+.card-header {
+  font-size: 20px;
+}
+
+button {
+  width: 40%;
+  border: none;
+  height: 30px;
+  margin: 10px;
+  border-radius: 15px;
+  font-size: 18px;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+.dark:hover {
+  background-color: dimgray;
+}
+
+.danger {
+  background-color: crimson;
+  color: white;
+}
+
+.danger:hover {
+  background-color: rgb(238, 75, 108);
+}

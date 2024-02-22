@@ -1,0 +1,160 @@
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.form-app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  font-family: sans-serif;
+  flex-wrap: wrap;
+  padding: 25px;
+  background-color: gray;
+  color: white;
+  border-radius: 30px;
+  margin: 100px;
+  margin-top: 30px;
+  box-shadow: 0 34px 38px rgba(59, 57, 57, 0.7);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.form-app:hover {
+  box-shadow: 50px 140px 120px rgba(207, 194, 154, 0.9);
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.form {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 80%;
+  border-radius: 30px;
+  padding: 6px;
+  color: white;
+  border: 1px solid rgb(196, 189, 189);
+  gap: 10px;
+  margin: 20px;
+  box-shadow: 0 24px 28px rgba(59, 57, 57, 0.7);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.form:hover {
+  box-shadow: 0 18px 26px rgba(203, 201, 201, 0.9);
+}
+
+.person {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+input {
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+  text-align: center;
+  font-size: 15px;
+  height: 30px;
+  width: 350px;
+  border-radius: 20px;
+  border: none;
+  margin: 6px;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  color: black;
+  font-size: 20px;
+  background-color: rgb(218, 200, 200);
+  border-radius: 20px;
+  margin: 10px;
+  border: none;
+}
+
+button:hover {
+  background-color: rgb(15, 14, 14);
+  color: white;
+}
+
+.horizontal-line {
+  border-top: 1px solid grey;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 40px;
+  text-align: center;
+  margin: 30px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* Media query for mobile devices */
+@media (min-width: 300px) and (max-width: 600px) {
+  input {
+    font-size: 15px;
+    height: 24px;
+    width: 190px;
+    border-radius: 20px;
+    margin: 6px;
+    padding: 2px;
+  }
+
+  .form-app {
+    padding: 11px;
+    margin: 8px;
+  }
+
+  .head-title {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 10px;
+    text-align: center;
+  }
+}
+
+/* Media query for Tablets */
+@media (min-width: 600px) and (max-width: 1200px) {
+  input {
+    font-size: 15px;
+    height: 24px;
+    width: 300px;
+    border-radius: 20px;
+    margin: 6px;
+    padding: 2px;
+  }
+
+  .form-app {
+    padding: 11px;
+    margin: 8px;
+  }
+
+  .head-title {
+    font-size: 70px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+}
